@@ -20,7 +20,7 @@ class Main {
      *
      */
 
-    public void main(String[] args) {
+    static final void main(String[] args) {
         // Create stacks for different types of items
         final Stack<String> fruitStack = new Stack<>();
         final Stack<String> colorStack = new Stack<>();
