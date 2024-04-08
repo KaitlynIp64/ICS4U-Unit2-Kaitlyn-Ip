@@ -58,3 +58,4 @@ const size6 = animals.size()
 console.log("The size of the stack is: " + size6)
 
 console.log("\nDone.")
+
