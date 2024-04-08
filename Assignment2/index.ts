@@ -8,35 +8,47 @@
 
 import { createPrompt } from 'bun-promptx'
 
-/**
- * The function finds the max run
- *
- * @param {string} userWord  - String variable
- * @returns {number} Return value
- */
-function maxRunFunction(userWord: string): number {
-  let maxRun = 1
-  let tempValue = 1
-  for (let counter = 0; counter < userWord.length; counter++) {
-    if (userWord.charAt(counter) === userWord.charAt(counter + 1)) {
-      tempValue += 1
+// Finds the highest amount of the same character in a row in a string
+function maxRun(string) {
+  // Loop variables
+  let selectedChar = 0
+  let oldChar = string[selectedChar]
+  let currentStreak = 0
+  let streaks = [1]
+  // Check for all of the streak of characters in a row
+  for (let counter = 1; counter < string.length; counter++) {
+    const currentChar = string[counter]
+
+    if (oldChar == currentChar) {
+      // Add one to the current streak
+      streaks[currentStreak]++
     } else {
-      if (tempValue > maxRun) {
-        maxRun = tempValue
-        tempValue = 1
-      }
+      // Add a new streak and start using it
+      streaks.push(1)
+      currentStreak++
+    }
+    // Move one character up
+    selectedChar++
+    oldChar = string[selectedChar]
+  }
+  let streak = 1
+  // Check all of the streaks for the largest one
+  for (let counter = 0; counter < streaks.length; counter++) {
+    if (streak < streaks[counter]) {
+      streak = streaks[counter]
     }
   }
-  if (tempValue > maxRun) {
-    maxRun = tempValue
-    tempValue = 1
-  }
-  return maxRun
+
+  return streak
 }
 
-const prompt = createPrompt()
-const userString = prompt('Enter a string: ')
-const maxRunValue = maxRunFunction(userString)
-console.log(`The max run is ${maxRunValue}`)
+// String values
+const stringChoice = createPrompt('Enter a string: ')
+const string = stringChoice.value
 
+// Get the max run and print it
+const maxRuns = maxRun(string)
+console.log(`The max run of ${string} is ${maxRuns}.`)
+
+// Show the program as done
 console.log('\nDone.')
