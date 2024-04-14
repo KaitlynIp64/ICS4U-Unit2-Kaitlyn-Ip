@@ -8,9 +8,9 @@
 
 import java.util.Stack;
 
-public class StackExample {
+public class KaiStack {
     public static void main(String[] args) {
-        Stack<String> fruits = new Stack<>();
+        let fruits = new KaiStack();
         fruits.push("apple");
         fruits.push("orange");
         fruits.push("watermelon");
@@ -22,7 +22,7 @@ public class StackExample {
         System.out.println("is empty: " + fruits.isEmpty());
         System.out.println();
 
-        Stack<String> colours = new Stack<>();
+        let colours = new KaiStack();
         colours.push("red");
         colours.push("blue");
         colours.push("purple");
@@ -32,7 +32,7 @@ public class StackExample {
         System.out.println("is empty: " + colours.isEmpty());
         System.out.println();
 
-        Stack<String> animals = new Stack<>();
+        let animals = new KaiStack();
         animals.push("dog");
         animals.push("otter");
         animals.push("duck");
