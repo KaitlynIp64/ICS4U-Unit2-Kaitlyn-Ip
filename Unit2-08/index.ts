@@ -1,7 +1,7 @@
 /*
 * This program is a vehicle class.
 *
-* @author  Mr Coxall
+* @author  Kaitlyn Ip
 * @version 1.0
 * @since   2020-01-01
 */

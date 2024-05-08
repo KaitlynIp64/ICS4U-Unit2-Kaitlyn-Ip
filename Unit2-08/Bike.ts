@@ -1,7 +1,7 @@
 /*
  * Class that defines bike.
  *
- * @author  Samuel Webster
+ * @author  Kaitlyn Ip
  * @version 1.0
  * @since   2024-01-01
  */
