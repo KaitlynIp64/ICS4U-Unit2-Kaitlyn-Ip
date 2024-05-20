@@ -1,7 +1,7 @@
 /*
 * This program is the standard truck class.
 *
-* @author  Samuel Webster
+* @author  Kaitlyn Ip
 * @version 1.0
 * @since   2024-03-25
 */
@@ -62,3 +62,4 @@ public class Truck extends Vehicle {
         this.setSpeed(this.getSpeed() - airPressure / 2);
     }
 }
+
