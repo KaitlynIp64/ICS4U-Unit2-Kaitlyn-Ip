@@ -5,6 +5,9 @@
  * Version: 1.0
  * Since: 2024-04-09
  */
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
        System.out.println();

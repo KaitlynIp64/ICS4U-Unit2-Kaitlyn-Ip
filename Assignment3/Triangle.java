@@ -1,10 +1,11 @@
 /**
- *  * Class that defines a triangle.
- *   *
- *    * @author Kaitlyn Ip
- *     * @version 1.0
- *      * @since 2024-01-01
- *       */
+ * Class that defines a triangle.
+ *
+ * @author Kaitlyn Ip
+ * @version 1.0
+ * @since 2024-01-01
+ */
+
 public class Triangle {
             private double[] sides;
             // Constructor
